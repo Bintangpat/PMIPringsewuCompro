@@ -156,7 +156,7 @@ export default function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.04, backgroundColor: "#991111" }}
                 whileTap={{ scale: 0.96 }}
-                className="bg-red-700 text-white font-bold tracking-widest text-sm px-8 py-3 rounded-sm"
+                className="bg-red-700 text-white font-semibold tracking-widest text-sm px-8 py-3 rounded-sm"
               >
                 DONASI
               </motion.button>

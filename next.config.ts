@@ -6,9 +6,13 @@ const nextConfig: NextConfig = {
       {
         source: "/",
         destination: "/home",
-        permanent: true, // Gunakan true untuk status code 301 (SEO friendly)
+        permanent: true, // 301 redirect (SEO friendly)
       },
     ];
+  },
+
+  images: {
+    domains: ["placehold.co"],
   },
 };
 

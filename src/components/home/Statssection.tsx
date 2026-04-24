@@ -173,7 +173,7 @@ export default function Statsection() {
             backgroundColor: "rgba(255,255,255,0.15)",
           }}
           whileTap={{ scale: 0.96 }}
-          className="border-2 border-white text-white font-bold tracking-widest text-sm px-9 py-3 rounded transition-colors"
+          className="border-2 border-white text-white font-semibold tracking-widest text-sm px-9 py-3 rounded transition-colors"
         >
           Kontak Kami
         </motion.button>
@@ -244,7 +244,7 @@ export default function Statsection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="shrink-0 bg-red-700 hover:bg-red-800 text-white font-bold tracking-widest text-sm px-6 py-3 rounded-sm transition-colors"
+              className="shrink-0 bg-red-700 hover:bg-red-800 text-white font-semibold tracking-widest text-sm px-6 py-3 rounded-sm transition-colors"
             >
               DONASI
             </motion.button>

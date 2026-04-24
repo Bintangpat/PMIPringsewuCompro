@@ -137,7 +137,7 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
             <div className="w-16 h-16 rounded-xl bg-white/90 flex items-center justify-center text-3xl shadow-lg">
               📚
             </div>
-            <span className="text-white font-bold tracking-widest text-sm">
+            <span className="text-white font-semibold tracking-widest text-sm">
               e-Library
             </span>
           </motion.div>
@@ -159,7 +159,7 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
             {item.date} &nbsp;|&nbsp; Dilihat {item.views} kali
           </p>
           <h3
-            className="text-gray-800 font-bold leading-snug text-sm tracking-wide uppercase"
+            className="text-gray-800 font-semibold leading-snug text-sm tracking-wide uppercase"
             style={{
               fontFamily: "'Google Sans Flex', sans-serif",
               fontSize: "0.95rem",
