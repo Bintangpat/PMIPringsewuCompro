@@ -71,7 +71,7 @@ const NAV_DATA: Record<string, NavItem> = {
       {
         title: "Donasi Uang",
         links: [
-          { label: "Mengapa Donasi", href: "/donation/monetary/why-donate" },
+          { label: "Mengapa Donasi", href: "/donation/monetary/why-donation" },
           { label: "Donasi Sekarang", href: "/donation/monetary/donation-now" },
           { label: "Kampanye Donasi", href: "/donation/monetary/campaigns" },
         ],
@@ -420,7 +420,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <Link
             href="/donation/monetary/donation-now"
-            className="bg-[#cc0000] px-4 py-1 font-semibold tracking-tighter hover:bg-[#a30000] transition-colors"
+            className="bg-[#cc0000] px-4 py-1 font-bold tracking-tighter hover:bg-[#a30000] transition-colors"
           >
             DONASI
           </Link>
@@ -450,7 +450,7 @@ const Navbar = () => {
       <nav className="bg-white px-8 py-5 shadow-lg flex items-center justify-between relative">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 cursor-pointer group">
-          <div className="w-10 h-10 rounded-full border-2 border-red-700 flex items-center justify-center font-semibold text-red-700 text-xl group-hover:bg-red-700 group-hover:text-white transition-all duration-300">
+          <div className="w-10 h-10 rounded-full border-2 border-red-700 flex items-center justify-center font-bold text-red-700 text-xl group-hover:bg-red-700 group-hover:text-white transition-all duration-300">
             ✚
           </div>
           <div className="text-[#cc0000] font-extrabold text-[10px] leading-tight uppercase tracking-tight">
@@ -480,7 +480,7 @@ const Navbar = () => {
                 {/* Link label + animated underline */}
                 <div className="flex flex-col items-center cursor-pointer group">
                   <span
-                    className={`text-[13px] font-semibold uppercase transition-all duration-300 ${
+                    className={`text-[13px] font-bold uppercase transition-all duration-300 ${
                       isActive || (link === "Beranda" && !activeMenu)
                         ? "text-red-700"
                         : "text-gray-800 group-hover:text-red-700"
@@ -570,7 +570,7 @@ const Navbar = () => {
         <div className="hidden xl:block">
           <Link
             href="/about-us/contact"
-            className="bg-red-700 text-white px-6 py-2 rounded-full font-semibold text-xs uppercase tracking-wider hover:bg-red-800 transition-all shadow-md hover:shadow-lg active:scale-95 inline-block"
+            className="bg-red-700 text-white px-6 py-2 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-red-800 transition-all shadow-md hover:shadow-lg active:scale-95 inline-block"
           >
             Hubungi Kami
           </Link>

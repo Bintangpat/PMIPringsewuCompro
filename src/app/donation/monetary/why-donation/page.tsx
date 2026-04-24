@@ -29,6 +29,9 @@ import {
   animate,
 } from "framer-motion";
 
+//componentsimport
+import Navbar from "@/src/components/navbar/navbar";
+
 // ─────────────────────────────────────────────────────────────────────────────
 // SEO METADATA  (App Router — pindahkan ke layout.tsx / generateMetadata jika
 //               perlu dynamic)
@@ -166,7 +169,7 @@ function AnnouncementBar() {
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.94 }}
         aria-label="Donasi sekarang"
-        className="shrink-0 bg-red-700 text-white text-xs font-semibold tracking-widest px-4 py-1 rounded-sm font-display"
+        className="shrink-0 bg-red-700 text-white text-xs font-bold tracking-widest px-4 py-1 rounded-sm font-display"
       >
         DONASI
       </motion.button>
@@ -196,68 +199,6 @@ function AnnouncementBar() {
 }
 
 /** Main navbar */
-function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", fn, { passive: true });
-    return () => window.removeEventListener("scroll", fn);
-  }, []);
-
-  return (
-    <motion.header
-      initial={{ y: -30, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.55, delay: 0.1 }}
-      className={`sticky top-0 z-50 bg-white transition-shadow duration-300 ${
-        scrolled ? "shadow-md" : "shadow-sm"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto flex items-center gap-10 px-8 py-4">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center gap-3 shrink-0"
-          aria-label="Halaman utama PMI"
-        >
-          <div className="w-11 h-11 rounded-full border-2 border-red-700 flex items-center justify-center">
-            <span className="text-red-700 text-2xl font-black leading-none">
-              ✚
-            </span>
-          </div>
-          <span
-            className="text-red-700 font-semibold text-sm leading-tight font-display"
-            aria-hidden
-          >
-            Palang
-            <br />
-            Merah
-            <br />
-            Indonesia
-          </span>
-        </Link>
-
-        {/* Navigation */}
-        <nav aria-label="Navigasi utama" className="flex gap-7 ml-auto">
-          {NAV_LINKS.map(({ label, href }, i) => (
-            <motion.div key={label} whileHover={{ y: -1 }}>
-              <Link
-                href={href}
-                className={`text-sm transition-colors font-medium ${
-                  label === "Donasi"
-                    ? "text-red-700 font-semibold"
-                    : "text-gray-600 hover:text-red-700"
-                }`}
-              >
-                {label}
-              </Link>
-            </motion.div>
-          ))}
-        </nav>
-      </div>
-    </motion.header>
-  );
-}
 
 /** Breadcrumb with JSON-LD structured data */
 function Breadcrumb() {
@@ -422,7 +363,7 @@ function WhyDonateArticle() {
                 {icon}
               </span>
               <h3
-                className="font-display font-semibold text-gray-900 leading-tight group-hover:text-red-700 transition-colors"
+                className="font-display font-bold text-gray-900 leading-tight group-hover:text-red-700 transition-colors"
                 style={{ fontSize: "clamp(1rem, 1.8vw, 1.15rem)" }}
               >
                 {title}
@@ -548,7 +489,7 @@ function VideoSection() {
               <div className="w-20 h-14 bg-red-600 rounded-2xl flex items-center justify-center shadow-2xl group-hover:bg-red-500 transition-colors">
                 <span className="text-white text-3xl ml-1">▶</span>
               </div>
-              <p className="text-white font-display font-semibold text-lg drop-shadow-lg">
+              <p className="text-white font-display font-bold text-lg drop-shadow-lg">
                 Stop Bermain Jari, Saatnya Beraksi
               </p>
               <p className="text-white/70 text-sm font-serif">PMI TV</p>
@@ -651,7 +592,7 @@ function HowToDonate() {
               {step}
             </span>
             {/* H3 */}
-            <h3 className="font-display font-semibold text-gray-900 text-base mb-2 group-hover:text-red-700 transition-colors">
+            <h3 className="font-display font-bold text-gray-900 text-base mb-2 group-hover:text-red-700 transition-colors">
               {title}
             </h3>
             <p className="text-gray-500 font-serif text-sm leading-relaxed">
@@ -672,7 +613,7 @@ function HowToDonate() {
           href="/donasi"
           whileHover={{ scale: 1.04, backgroundColor: "#991111" }}
           whileTap={{ scale: 0.96 }}
-          className="inline-block bg-red-700 text-white font-display font-semibold tracking-widest text-sm px-14 py-4 rounded-lg shadow-lg hover:shadow-red-900/30 transition-all"
+          className="inline-block bg-red-700 text-white font-display font-bold tracking-widest text-sm px-14 py-4 rounded-lg shadow-lg hover:shadow-red-900/30 transition-all"
           aria-label="Mulai donasi sekarang"
         >
           Donasi Sekarang
@@ -784,7 +725,7 @@ function FooterCTA() {
             scale: 1.03,
           }}
           whileTap={{ scale: 0.96 }}
-          className="border-2 border-white text-white font-display font-semibold tracking-widest text-sm px-9 py-3 rounded transition-colors"
+          className="border-2 border-white text-white font-display font-bold tracking-widest text-sm px-9 py-3 rounded transition-colors"
         >
           Kontak Kami
         </motion.a>
@@ -839,7 +780,7 @@ function FooterCTA() {
               href="/donasi"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="shrink-0 bg-red-700 hover:bg-red-800 text-white font-display font-semibold tracking-widest text-sm px-6 py-3 rounded-sm transition-colors"
+              className="shrink-0 bg-red-700 hover:bg-red-800 text-white font-display font-bold tracking-widest text-sm px-6 py-3 rounded-sm transition-colors"
             >
               DONASI
             </motion.a>
@@ -915,15 +856,7 @@ export default function WhyDonatePage() {
         }}
       />
 
-      <div
-        className="min-h-screen bg-gray-50 overflow-x-hidden"
-        style={
-          {
-            "--font-display": "'Barlow Condensed', sans-serif",
-            "--font-body": "'Source Serif 4', serif",
-          } as React.CSSProperties
-        }
-      >
+      <div className="min-h-screen bg-gray-50 overflow-x-hidden">
         {/* Utility class helpers for custom fonts */}
         <style>{`
           .font-display { font-family: var(--font-display); }
@@ -931,7 +864,7 @@ export default function WhyDonatePage() {
         `}</style>
 
         {/* ── Layout ─────────────────────────────────────────────── */}
-        <AnnouncementBar />
+
         <Navbar />
 
         <main id="main-content">
