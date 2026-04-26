@@ -52,11 +52,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
+    <div
       lang="en"
       className={`${Plus_JakartaSans.variable} ${Plus_JakartaSans.variable} ${Plus_JakartaSans.className} h-full antialiased`}
     >
       {children}
-    </html>
+    </div>
   );
 }

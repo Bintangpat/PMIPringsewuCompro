@@ -7,7 +7,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView, animate } from "framer-motion";
-
+import { BarChart2, Globe, Camera, Mail, Phone } from "lucide-react";
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface StatItem {
   value: number;
@@ -63,13 +63,117 @@ const staggerContainer = {
 };
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 px-10 pt-10 pb-7">
+    <footer className="bg-neutral-900 flex flex-col">
+      <div className="w-full py-12  border-t border-slate-200 bg-white">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 container mx-auto px-8 py-12">
+          <div className="col-span-1 md:col-span-1">
+            <div className="text-2xl font-black text-rose-600 tracking-tighter mb-6">
+              PMI Indonesia
+            </div>
+            <p className="text-sm text-slate-500 mb-8 leading-relaxed">
+              Mewujudkan PMI yang profesional, netral, mandiri dan bergerak
+              bersama masyarakat.
+            </p>
+            <div className="flex gap-5">
+              <button className="text-slate-400 hover:text-rose-600 transition-colors">
+                <BarChart2 className="w-5 h-5" />
+              </button>
+              <button className="text-slate-400 hover:text-rose-600 transition-colors">
+                <Globe className="w-5 h-5" />
+              </button>
+              <button className="text-slate-400 hover:text-rose-600 transition-colors">
+                <Camera className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">
+              Tentang Kami
+            </h4>
+            <ul className="space-y-4 text-sm font-medium text-slate-500">
+              <li>
+                <a className="hover:text-rose-600 transition-colors" href="#">
+                  Visi & Misi
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-rose-600 transition-colors" href="#">
+                  Struktur Organisasi
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-rose-600 transition-colors" href="#">
+                  Transparency Report
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-rose-600 transition-colors" href="#">
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">
+              Layanan
+            </h4>
+            <ul className="space-y-4 text-sm font-medium text-slate-500">
+              <li>
+                <a className="hover:text-rose-600 transition-colors" href="#">
+                  Donor Darah
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-rose-600 transition-colors" href="#">
+                  Bantuan Bencana
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-rose-600 transition-colors" href="#">
+                  Ambulans 24 Jam
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-rose-600 transition-colors" href="#">
+                  Diklat Relawan
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">
+              Kontak
+            </h4>
+            <ul className="space-y-4 text-sm font-medium text-slate-500">
+              <li className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-slate-400" /> info@pmi.or.id
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-slate-400" /> (021) 7992325
+              </li>
+              <li className="pt-2">
+                <a className="hover:text-rose-600 transition-colors" href="#">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-rose-600 transition-colors" href="#">
+                  Terms of Service
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="flex flex-wrap gap-10 justify-between items-start max-w-6xl mx-auto"
+        className="flex flex-wrap gap-10 justify-between items-start container px-8 py-12 mx-auto"
       >
         {/* Address */}
         <motion.div variants={fadeUp}>
@@ -119,9 +223,9 @@ export default function Footer() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="mt-8 pt-5 border-t border-white/10 text-center"
+        className="mt-8 py-5 border-t border-white/10 text-center"
       >
-        <p className="text-gray-600 text-xs tracking-wide">
+        <p className="text-gray-600 text-xs tracking-wide uppercase">
           © {new Date().getFullYear()} Palang Merah Indonesia. All rights
           reserved.
         </p>

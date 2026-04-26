@@ -268,7 +268,7 @@ export default function DonateGoodsPage() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-white rounded-4xl shadow-2xl border border-slate-100 overflow-hidden"
+          className="bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden"
         >
           <div className="bg-slate-900 p-12 text-white relative">
             <div className="absolute top-0 right-0 p-8 opacity-10">

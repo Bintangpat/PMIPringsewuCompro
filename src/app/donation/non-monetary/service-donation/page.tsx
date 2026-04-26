@@ -50,7 +50,7 @@ export default function ServiceDonationPage() {
             src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80"
             alt="Relawan PMI membantu masyarakat"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
         </motion.div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
@@ -118,7 +118,7 @@ export default function ServiceDonationPage() {
           {/* Large Feature (Span 2) */}
           <motion.div
             variants={fadeUpVariant}
-            className="md:col-span-2 bg-white p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col justify-between group hover:border-rose-200 hover:shadow-[0_8px_30px_rgb(225,29,72,0.08)] transition-all duration-500"
+            className="md:col-span-2 bg-white p-10 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col justify-between group hover:border-rose-200 hover:shadow-[0_8px_30px_rgb(225,29,72,0.08)] transition-all duration-500"
           >
             <div>
               <div className="w-16 h-16 bg-rose-50 rounded-2xl flex items-center justify-center mb-8 text-rose-600 group-hover:scale-110 transition-transform duration-500">
@@ -146,7 +146,7 @@ export default function ServiceDonationPage() {
           <div className="flex flex-col gap-6">
             <motion.div
               variants={fadeUpVariant}
-              className="bg-white p-8 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 group"
+              className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 group"
             >
               <div className="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center mb-6 text-rose-600 group-hover:rotate-12 transition-transform duration-300">
                 <Brain className="w-6 h-6" />
@@ -162,7 +162,7 @@ export default function ServiceDonationPage() {
 
             <motion.div
               variants={fadeUpVariant}
-              className="bg-white p-8 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 group"
+              className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 group"
             >
               <div className="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center mb-6 text-rose-600 group-hover:-rotate-12 transition-transform duration-300">
                 <Users className="w-6 h-6" />
@@ -176,7 +176,7 @@ export default function ServiceDonationPage() {
 
             <motion.div
               variants={fadeUpVariant}
-              className="bg-rose-600 p-8 rounded-[2rem] shadow-xl shadow-rose-200 text-white relative overflow-hidden"
+              className="bg-rose-600 p-8 rounded-2xl shadow-xl shadow-rose-200 text-white relative overflow-hidden"
             >
               <div className="relative z-10">
                 <h3 className="text-xl font-bold mb-3">
@@ -228,7 +228,7 @@ export default function ServiceDonationPage() {
             {/* Story Card 1 */}
             <motion.div
               variants={fadeUpVariant}
-              className="bg-white rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border border-slate-100"
+              className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border border-slate-100"
             >
               <div className="relative h-64 overflow-hidden group">
                 <img
@@ -242,7 +242,7 @@ export default function ServiceDonationPage() {
                   </span>
                 </div>
               </div>
-              <div className="p-8 flex-grow flex flex-col">
+              <div className="p-8 grow flex flex-col">
                 <h3 className="text-xl font-bold mb-4 tracking-tight leading-snug">
                   "Senyum Pasien Adalah Energi Terbesar Saya"
                 </h3>
@@ -274,7 +274,7 @@ export default function ServiceDonationPage() {
             {/* Story Card 2 */}
             <motion.div
               variants={fadeUpVariant}
-              className="bg-white rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border-t-[6px] border-t-rose-600 border-x border-b border-slate-100"
+              className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border-t-[6px] border-t-rose-600 border-x border-b border-slate-100"
             >
               <div className="relative h-64 overflow-hidden group">
                 <img
@@ -288,7 +288,7 @@ export default function ServiceDonationPage() {
                   </span>
                 </div>
               </div>
-              <div className="p-8 flex-grow flex flex-col">
+              <div className="p-8 grow flex flex-col">
                 <h3 className="text-xl font-bold mb-4 tracking-tight leading-snug">
                   Membangun Kembali Harapan di Cianjur
                 </h3>
@@ -320,7 +320,7 @@ export default function ServiceDonationPage() {
             {/* Story Card 3 */}
             <motion.div
               variants={fadeUpVariant}
-              className="bg-white rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border border-slate-100"
+              className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border border-slate-100"
             >
               <div className="relative h-64 overflow-hidden group">
                 <img
@@ -334,7 +334,7 @@ export default function ServiceDonationPage() {
                   </span>
                 </div>
               </div>
-              <div className="p-8 flex-grow flex flex-col">
+              <div className="p-8 grow flex flex-col">
                 <h3 className="text-xl font-bold mb-4 tracking-tight leading-snug">
                   Menanamkan Jiwa Kemanusiaan Sejak Dini
                 </h3>
@@ -399,116 +399,6 @@ export default function ServiceDonationPage() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full py-12 mt-10 border-t border-slate-200 bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-12">
-          <div className="col-span-1 md:col-span-1">
-            <div className="text-2xl font-black text-rose-600 tracking-tighter mb-6">
-              PMI Indonesia
-            </div>
-            <p className="text-sm text-slate-500 mb-8 leading-relaxed">
-              Mewujudkan PMI yang profesional, netral, mandiri dan bergerak
-              bersama masyarakat.
-            </p>
-            <div className="flex gap-5">
-              <button className="text-slate-400 hover:text-rose-600 transition-colors">
-                <BarChart2 className="w-5 h-5" />
-              </button>
-              <button className="text-slate-400 hover:text-rose-600 transition-colors">
-                <Globe className="w-5 h-5" />
-              </button>
-              <button className="text-slate-400 hover:text-rose-600 transition-colors">
-                <Camera className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">
-              Tentang Kami
-            </h4>
-            <ul className="space-y-4 text-sm font-medium text-slate-500">
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Visi & Misi
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Struktur Organisasi
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Transparency Report
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">
-              Layanan
-            </h4>
-            <ul className="space-y-4 text-sm font-medium text-slate-500">
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Donor Darah
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Bantuan Bencana
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Ambulans 24 Jam
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Diklat Relawan
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">
-              Kontak
-            </h4>
-            <ul className="space-y-4 text-sm font-medium text-slate-500">
-              <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-slate-400" /> info@pmi.or.id
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-slate-400" /> (021) 7992325
-              </li>
-              <li className="pt-2">
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Terms of Service
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-8 pt-8 border-t border-slate-100">
-          <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 text-center">
-            © 2026 Palang Merah Indonesia. Profesional, Responsif, Mandiri.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
