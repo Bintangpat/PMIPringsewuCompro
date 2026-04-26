@@ -27,13 +27,13 @@ const SLIDES: Slide[] = [
     title: "Tahun Berganti,\nDedikasi Tak Berhenti",
     subtitle:
       "Bergabunglah dalam misi kami untuk memberikan bantuan dan harapan yang menyelamatkan jiwa bagi mereka yang membutuhkan.",
-    bg: "https://placehold.co/1600x700/7a2020/ffffff?text=Slide+1",
+    bg: "https://tse3.mm.bing.net/th/id/OIP.34OL-tRsMvW4wsnaBswjwwHaEC?rs=1&pid=ImgDetMain&o=7&rm=3",
   },
   {
     title: "Bersama Kita\nSelamatkan Lebih Banyak Nyawa",
     subtitle:
       "Setiap tetes darah, setiap jam relawan, dan setiap rupiah donasi Anda berarti bagi mereka yang membutuhkan.",
-    bg: "https://placehold.co/1600x700/1a3a5c/ffffff?text=Slide+2",
+    bg: "https://image.popmama.com/post/20250904/upload_9dcc014f15b8064b686bda3cfa02b3a4_b6bc5dd9-8dc6-4c0f-8a51-760c43ff2368.png",
   },
 ];
 
@@ -132,14 +132,7 @@ export default function HeroSection() {
             exit="exit"
             className="absolute inset-0 flex flex-col justify-center px-16"
           >
-            <h1
-              className="text-white font-black leading-tight mb-5 whitespace-pre-line drop-shadow-2xl"
-              style={{
-                fontFamily: "'Google Sans Flex', sans-serif",
-                fontSize: "clamp(2rem, 4vw, 3.4rem)",
-                maxWidth: 560,
-              }}
-            >
+            <h1 className="text-6xl md:text-3xl text-white max-w-140 font-black leading-tight mb-5 whitespace-pre-line drop-shadow-2xl">
               {slide.title}
             </h1>
             <p

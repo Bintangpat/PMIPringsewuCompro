@@ -106,10 +106,6 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
           whileInView="visible"
           viewport={{ once: true }}
           className="text-red-700 font-black italic mb-5"
-          style={{
-            fontFamily: "'Google Sans Flex', sans-serif",
-            fontSize: "clamp(1.35rem, 2vw, 1.65rem)",
-          }}
         >
           {item.category}
         </motion.h2>
@@ -161,7 +157,7 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
           <h3
             className="text-gray-800 font-bold leading-snug text-sm tracking-wide uppercase"
             style={{
-              fontFamily: "'Google Sans Flex', sans-serif",
+              fontFamily: "'Jakarta Plus Sans', sans-serif",
               fontSize: "0.95rem",
             }}
           >
