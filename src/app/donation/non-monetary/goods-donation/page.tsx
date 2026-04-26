@@ -52,7 +52,7 @@ export default function DonateGoodsPage() {
       </Head>
 
       {/* --- Hero Section --- */}
-      <section className="relative h-202 flex items-center overflow-hidden">
+      <section className="relative h-161 flex items-center overflow-hidden">
         <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}

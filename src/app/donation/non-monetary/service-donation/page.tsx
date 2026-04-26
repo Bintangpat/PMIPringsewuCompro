@@ -38,7 +38,7 @@ export default function ServiceDonationPage() {
       {/* TopNavBar */}
 
       {/* Hero Section */}
-      <section className="relative h-[650px] flex items-center overflow-hidden">
+      <section className="relative h-161 flex items-center overflow-hidden">
         <motion.div
           initial={{ scale: 1.05 }}
           animate={{ scale: 1 }}
