@@ -12,6 +12,7 @@ import {
   Shield,
   CreditCard,
 } from "lucide-react";
+import Breadcrumb from "@/src/components/crumbread";
 
 const presetAmounts = [25000, 50000, 100000, 200000, 500000, 1000000];
 
@@ -57,8 +58,9 @@ export default function DonationFormPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8f9ff] text-slate-900 selection:bg-rose-200 selection:text-rose-900">
-      <main className="pt-12 pb-20 px-4">
+    <div className="flex flex-col items-center-safe min-h-screen bg-[#f8f9ff] text-slate-900 selection:bg-rose-200 selection:text-rose-900">
+      <main className="pt-12 pb-20 container">
+        <Breadcrumb />
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -286,106 +288,6 @@ export default function DonationFormPage() {
           </div>
         </motion.div>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-white w-full py-12 mt-10 border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="col-span-1 md:col-span-1">
-            <div className="text-2xl font-black text-rose-600 mb-4 tracking-tighter">
-              PMI Indonesia
-            </div>
-            <p className="text-sm text-slate-500 mb-4 leading-relaxed font-medium">
-              Lembaga kemanusiaan terdepan di Indonesia yang berkomitmen untuk
-              membantu tanpa membedakan.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-widest text-xs">
-              Navigasi
-            </h4>
-            <ul className="space-y-4 text-sm font-medium text-slate-500">
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Campaigns
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Volunteering
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  News
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-widest text-xs">
-              Kebijakan
-            </h4>
-            <ul className="space-y-4 text-sm font-medium text-slate-500">
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-rose-600 transition-colors" href="#">
-                  Transparency Report
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-slate-900 mb-6 uppercase tracking-widest text-xs">
-              Kontak
-            </h4>
-            <p className="text-sm font-medium text-slate-500 mb-2">
-              Jl. Gatot Subroto No.12, Jakarta
-            </p>
-            <p className="text-sm font-medium text-slate-500 mb-6">
-              info@pmi.or.id
-            </p>
-            <div className="flex gap-4">
-              <button className="text-slate-400 hover:text-rose-600 transition-colors">
-                <Globe className="w-5 h-5" />
-              </button>
-              <button className="text-slate-400 hover:text-rose-600 transition-colors">
-                <Camera className="w-5 h-5" />
-              </button>
-              <button className="text-slate-400 hover:text-rose-600 transition-colors">
-                <Video className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-8 border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 text-center md:text-left">
-            © 2026 Palang Merah Indonesia. Profesional, Responsif, Mandiri.
-          </p>
-          <div className="flex gap-5">
-            <CheckCircle2 className="w-5 h-5 text-slate-300" />
-            <Shield className="w-5 h-5 text-slate-300" />
-            <CreditCard className="w-5 h-5 text-slate-300" />
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
