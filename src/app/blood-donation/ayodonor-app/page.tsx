@@ -4,14 +4,24 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   SmartphoneNfc,
-  Droplets,
   CalendarDays,
   BellRing,
-  MapPin,
-  History,
   ArrowRight,
   Download,
   Smartphone,
+  BadgeCheck,
+  Apple,
+  Play,
+  Droplets,
+  CalendarCheck,
+  Activity,
+  History,
+  MapPin,
+  HeartHandshake,
+  Search,
+  Calendar,
+  IdCard,
+  Users,
 } from "lucide-react";
 
 export default function AyoDonorPage() {
@@ -44,10 +54,317 @@ export default function AyoDonorPage() {
       },
     },
   };
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 }
+    }
+  };
+
+
 
   return (
     <main className="pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto selection:bg-rose-200 selection:text-rose-900">
       {/* Hero Section */}
+      {/* --- Hero Section --- */}
+      <section className="relative overflow-hidden bg-white px-8 py-20 lg:py-32 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          {/* Text Content */}
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="order-2 lg:order-1 space-y-8"
+          >
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-rose-50 text-rose-600 px-4 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">
+              <BadgeCheck className="w-4 h-4" />
+              Aplikasi Resmi PMI Indonesia
+            </motion.div>
+
+            <motion.h1 variants={fadeUp} className="font-['Plus_Jakarta_Sans'] text-4xl md:text-5xl lg:text-[56px] font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+              Menjadi Pahlawan <span className="text-rose-600">Kemanusiaan</span> dalam Satu Genggaman.
+            </motion.h1>
+
+            <motion.p variants={fadeUp} className="text-lg text-slate-500 max-w-lg leading-relaxed font-medium">
+              Cek jadwal donor darah, cari stok darah terdekat, dan pantau riwayat donor Anda dengan mudah melalui aplikasi Ayo Donor.
+            </motion.p>
+
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 pt-4">
+              <a href="#" className="flex items-center justify-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-xl hover:bg-slate-800 transition-all active:scale-95 shadow-lg group">
+                <Apple className="w-8 h-8 fill-current" />
+                <div className="text-left">
+                  <div className="text-[10px] uppercase font-bold opacity-70 leading-none mb-1">Download on the</div>
+                  <div className="text-lg font-bold font-['Plus_Jakarta_Sans'] leading-none">App Store</div>
+                </div>
+              </a>
+              <a href="#" className="flex items-center justify-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-xl hover:bg-slate-800 transition-all active:scale-95 shadow-lg group">
+                <Play className="w-8 h-8 fill-current" />
+                <div className="text-left">
+                  <div className="text-[10px] uppercase font-bold opacity-70 leading-none mb-1">Get it on</div>
+                  <div className="text-lg font-bold font-['Plus_Jakarta_Sans'] leading-none">Google Play</div>
+                </div>
+              </a>
+            </motion.div>
+
+            <motion.div variants={fadeUp} className="flex items-center gap-6 pt-10 border-t border-slate-100">
+              <div className="flex -space-x-3">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80" alt="User" className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-sm" />
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80" alt="User" className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-sm" />
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80" alt="User" className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-sm" />
+                <div className="w-12 h-12 rounded-full border-4 border-white bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs z-10 shadow-sm">+50k</div>
+              </div>
+              <p className="text-sm text-slate-500 font-medium">
+                Bergabung dengan <span className="font-bold text-slate-900">50.000+</span> pendonor aktif minggu ini.
+              </p>
+            </motion.div>
+          </motion.div>
+
+          {/* Phone Mockup */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="order-1 lg:order-2 relative flex justify-center"
+          >
+            {/* Background Decoration */}
+            <div className="absolute inset-0 bg-rose-600/5 rounded-full blur-[100px] -z-10 scale-125 pointer-events-none" />
+
+            <motion.div
+              variants={floatAnimation}
+              initial="initial"
+              animate="animate"
+              className="relative w-full max-w-[320px] aspect-[9/18.5] bg-slate-900 rounded-[3rem] border-[8px] border-slate-900 shadow-2xl overflow-hidden shadow-slate-900/20"
+            >
+              {/* Phone Notch */}
+              <div className="absolute top-0 inset-x-0 h-6 flex justify-center items-end z-20">
+                <div className="w-24 h-4 bg-slate-900 rounded-b-2xl" />
+              </div>
+
+              {/* App Interface Content */}
+              <div className="w-full h-full bg-[#f8f9ff] pt-12 px-5 space-y-5 flex flex-col relative z-10">
+
+                {/* Header */}
+                <div className="flex justify-between items-center">
+                  <div>
+                    <p className="text-[11px] text-slate-500 font-medium">Selamat Pagi,</p>
+                    <p className="text-sm font-bold text-slate-900">Ahmad Fauzi</p>
+                  </div>
+                  <div className="w-10 h-10 rounded-full bg-slate-200 overflow-hidden border-2 border-white shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80" alt="Profile" className="w-full h-full object-cover" />
+                  </div>
+                </div>
+
+                {/* Blood Type Card */}
+                <div className="bg-rose-600 p-5 rounded-2xl text-white shadow-xl shadow-rose-200 space-y-2 relative overflow-hidden">
+                  <Droplets className="absolute -right-4 -bottom-4 w-24 h-24 text-white opacity-10" />
+                  <p className="text-[10px] opacity-90 uppercase tracking-widest font-bold">Golongan Darah</p>
+                  <div className="flex justify-between items-end">
+                    <span className="text-5xl font-black font-['Plus_Jakarta_Sans'] tracking-tighter">B+</span>
+                  </div>
+                </div>
+
+                {/* Dashboard Grid */}
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { icon: CalendarCheck, label: 'Jadwal' },
+                    { icon: Activity, label: 'Stok Darah' },
+                    { icon: History, label: 'Riwayat' },
+                    { icon: MapPin, label: 'Lokasi UDD' },
+                  ].map((item, idx) => (
+                    <div key={idx} className="bg-white p-3.5 rounded-xl border border-slate-100 text-center shadow-sm flex flex-col items-center justify-center gap-2 hover:border-rose-200 transition-colors">
+                      <item.icon className="w-6 h-6 text-rose-600" />
+                      <p className="text-[11px] font-bold text-slate-700">{item.label}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* News Card Skeleton */}
+                <div className="space-y-3 mt-auto pb-6">
+                  <p className="text-[11px] font-bold uppercase text-slate-400 tracking-wider">Terbaru</p>
+                  <div className="bg-white p-3 rounded-xl border border-slate-100 flex gap-3 shadow-sm">
+                    <div className="w-16 h-12 bg-slate-100 rounded-lg animate-pulse" />
+                    <div className="flex-1 space-y-2 py-1">
+                      <div className="h-2 w-full bg-slate-100 rounded animate-pulse" />
+                      <div className="h-2 w-2/3 bg-slate-100 rounded animate-pulse" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </motion.div>
+
+            {/* Floating Badge */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+              className="absolute bottom-10 -left-8 md:-left-12 bg-white p-4 rounded-2xl shadow-xl shadow-slate-200/50 flex items-center gap-4 max-w-[220px] border border-slate-100 z-30"
+            >
+              <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                <HeartHandshake className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Siap Donor</p>
+                <p className="text-sm font-bold text-slate-900 leading-tight">Kamu bisa donor lagi hari ini!</p>
+              </div>
+            </motion.div>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* --- Features Bento Grid --- */}
+      <section className="max-w-7xl mx-auto px-8 py-24">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="text-center mb-16 space-y-4"
+        >
+          <motion.h2 variants={fadeUp} className="font-['Plus_Jakarta_Sans'] text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Fitur Unggulan Ayo Donor
+          </motion.h2>
+          <motion.p variants={fadeUp} className="text-lg text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed">
+            Kami merancang setiap fitur untuk memudahkan langkah mulia Anda dalam membantu sesama.
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={staggerContainer}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          {/* Large Feature */}
+          <motion.div variants={fadeUp} className="md:col-span-2 bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-rose-200 transition-all duration-300 group overflow-hidden relative min-h-[300px] flex items-center">
+            <div className="relative z-10 max-w-sm">
+              <div className="w-16 h-16 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Search className="w-8 h-8" />
+              </div>
+              <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold text-slate-900 mb-4 tracking-tight">Pencarian Stok Darah Real-time</h3>
+              <p className="text-slate-500 font-medium leading-relaxed">
+                Cek ketersediaan kantong darah berdasarkan golongan dan lokasi di seluruh Unit Donor Darah PMI secara instan.
+              </p>
+            </div>
+            <div className="absolute right-0 bottom-0 w-1/2 md:w-[40%] h-full opacity-20 group-hover:scale-105 transition-transform duration-700 pointer-events-none mix-blend-multiply">
+              <img
+                src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&q=80"
+                alt="Stok Darah"
+                className="w-full h-full object-cover rounded-tl-[4rem]"
+              />
+            </div>
+          </motion.div>
+
+          {/* Small Feature 1 */}
+          <motion.div variants={fadeUp} className="bg-rose-50/50 p-10 rounded-[2.5rem] border border-rose-100/50 shadow-sm hover:shadow-md hover:bg-rose-50 transition-all duration-300 group">
+            <div className="w-16 h-16 rounded-2xl bg-white text-rose-600 flex items-center justify-center mb-6 shadow-sm group-hover:rotate-6 transition-transform duration-300">
+              <Calendar className="w-8 h-8" />
+            </div>
+            <h3 className="font-['Plus_Jakarta_Sans'] text-xl font-bold text-slate-900 mb-4 tracking-tight">Pengingat Jadwal</h3>
+            <p className="text-slate-500 text-sm font-medium leading-relaxed">
+              Jangan pernah melewatkan kesempatan donor lagi. Dapatkan notifikasi saat tubuh Anda sudah siap untuk mendonorkan kembali.
+            </p>
+          </motion.div>
+
+          {/* Small Feature 2 */}
+          <motion.div variants={fadeUp} className="bg-slate-900 p-10 rounded-[2.5rem] text-white shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
+            <div className="w-16 h-16 rounded-2xl bg-white/10 text-white flex items-center justify-center mb-6 group-hover:-rotate-6 transition-transform duration-300 backdrop-blur-sm">
+              <IdCard className="w-8 h-8" />
+            </div>
+            <h3 className="font-['Plus_Jakarta_Sans'] text-xl font-bold text-white mb-4 tracking-tight">Digital Donor Card</h3>
+            <p className="text-slate-300 text-sm font-medium leading-relaxed">
+              Kartu donor digital yang praktis, menggantikan kartu fisik. Cukup tunjukkan QR Code saat registrasi di lokasi.
+            </p>
+          </motion.div>
+
+          {/* Medium Feature */}
+          <motion.div variants={fadeUp} className="md:col-span-2 bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-rose-200 transition-all duration-300 flex flex-col md:flex-row gap-10 items-center group">
+            <div className="flex-1">
+              <div className="w-16 h-16 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Users className="w-8 h-8" />
+              </div>
+              <h3 className="font-['Plus_Jakarta_Sans'] text-2xl font-bold text-slate-900 mb-4 tracking-tight">Komunitas Pendonor</h3>
+              <p className="text-slate-500 font-medium leading-relaxed">
+                Lihat peringkat donor di Hall of Fame dan dapatkan lencana eksklusif sebagai bentuk apresiasi atas kepedulian Anda.
+              </p>
+            </div>
+            <div className="flex-1 flex justify-center md:justify-end w-full">
+              <div className="relative w-48 h-48 rounded-full border-8 border-rose-50 overflow-hidden shadow-inner group-hover:border-rose-100 transition-colors duration-500">
+                <img
+                  src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80"
+                  alt="Community"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* --- CTA Download Section --- */}
+      <section className="max-w-7xl mx-auto px-8 mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="bg-rose-600 rounded-[3rem] p-12 lg:p-20 text-white overflow-hidden relative shadow-2xl shadow-rose-200"
+        >
+          {/* Abstract Glow */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/20 blur-[100px] rounded-full -mr-20 -mt-20 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-black/20 blur-[100px] rounded-full -ml-20 -mb-20 pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
+            <div className="max-w-2xl text-center lg:text-left space-y-6">
+              <h2 className="text-4xl md:text-5xl font-extrabold font-['Plus_Jakarta_Sans'] leading-[1.15] tracking-tight">
+                Unduh Aplikasi Ayo Donor Sekarang
+              </h2>
+              <p className="text-rose-100 text-lg font-medium leading-relaxed">
+                Mulai langkah kecilmu untuk memberikan harapan besar bagi mereka yang membutuhkan. Tersedia gratis di App Store dan Google Play.
+              </p>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-6">
+                <a href="#" className="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-slate-50 transition-all active:scale-95 shadow-lg">
+                  <Apple className="w-6 h-6 fill-current" />
+                  <span>App Store</span>
+                </a>
+                <a href="#" className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-slate-800 transition-all active:scale-95 shadow-lg border border-slate-700">
+                  <Play className="w-6 h-6 fill-current" />
+                  <span>Google Play</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="flex gap-8 bg-white/10 backdrop-blur-md p-8 md:p-10 rounded-[2.5rem] border border-white/20 shadow-xl w-full max-w-md lg:w-auto shrink-0 justify-center">
+              <div className="space-y-4 text-center">
+                <div className="bg-white p-3 rounded-2xl w-32 h-32 mx-auto shadow-sm">
+                  {/* Mock QR Code Pattern via CSS grid for visual representation */}
+                  <div className="w-full h-full grid grid-cols-4 grid-rows-4 gap-1 p-1">
+                    {Array.from({ length: 16 }).map((_, i) => (
+                      <div key={i} className={`bg-slate-900 rounded-sm ${Math.random() > 0.5 ? 'opacity-100' : 'opacity-0'}`} />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-xs font-bold text-rose-100 uppercase tracking-widest">iOS App</p>
+              </div>
+              <div className="space-y-4 text-center">
+                <div className="bg-white p-3 rounded-2xl w-32 h-32 mx-auto shadow-sm">
+                  {/* Mock QR Code Pattern */}
+                  <div className="w-full h-full grid grid-cols-4 grid-rows-4 gap-1 p-1">
+                    {Array.from({ length: 16 }).map((_, i) => (
+                      <div key={i} className={`bg-slate-900 rounded-sm ${Math.random() > 0.3 ? 'opacity-100' : 'opacity-0'}`} />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-xs font-bold text-rose-100 uppercase tracking-widest">Android App</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
