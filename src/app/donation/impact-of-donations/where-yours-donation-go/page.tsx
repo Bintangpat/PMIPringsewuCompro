@@ -50,7 +50,7 @@ export default function ImpactGalleryPage() {
           </motion.span>
           <motion.h1
             variants={fadeUp}
-            className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 max-w-3xl font-['Plus_Jakarta_Sans'] tracking-tight leading-tight"
+            className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 max-w-3xltracking-tight leading-tight"
           >
             Melihat Nyata Dampak Dari Setiap Rupiah Yang Anda Donasikan
           </motion.h1>
@@ -112,7 +112,7 @@ export default function ImpactGalleryPage() {
           className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-6"
         >
           <div>
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-3 font-['Plus_Jakarta_Sans'] tracking-tight">
+            <h2 className="text-3xl font-extrabold text-slate-900 mb-3tracking-tight">
               Cerita Dari Lapangan
             </h2>
             <p className="text-slate-500 font-medium">
@@ -156,7 +156,7 @@ export default function ImpactGalleryPage() {
                 <MapPin className="w-4 h-4" />
                 <span>Cianjur, Jawa Barat</span>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-rose-600 transition-colors font-['Plus_Jakarta_Sans'] leading-snug">
+              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-rose-600 transition-colorsleading-snug">
                 Transformasi Pesisir: Jembatan Harapan
               </h3>
               <p className="text-slate-500 text-sm line-clamp-3 mb-8 leading-relaxed font-medium">
@@ -214,7 +214,7 @@ export default function ImpactGalleryPage() {
                 <MapPin className="w-4 h-4" />
                 <span>Lombok, NTB</span>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-rose-600 transition-colors font-['Plus_Jakarta_Sans'] leading-snug">
+              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-rose-600 transition-colorsleading-snug">
                 Kembali ke Sekolah Pasca Gempa
               </h3>
               <p className="text-slate-500 text-sm line-clamp-3 mb-8 leading-relaxed font-medium">
@@ -272,7 +272,7 @@ export default function ImpactGalleryPage() {
                 <MapPin className="w-4 h-4" />
                 <span>Sigi, Sulawesi Tengah</span>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-rose-600 transition-colors font-['Plus_Jakarta_Sans'] leading-snug">
+              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-rose-600 transition-colorsleading-snug">
                 Pengairan Mandiri untuk Petani
               </h3>
               <p className="text-slate-500 text-sm line-clamp-3 mb-8 leading-relaxed font-medium">
@@ -330,7 +330,7 @@ export default function ImpactGalleryPage() {
                   CAPAIAN UTAMA 2024
                 </span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-extrabold mb-6 font-['Plus_Jakarta_Sans'] leading-tight tracking-tight">
+              <h3 className="text-3xl md:text-4xl font-extrabold mb-6leading-tight tracking-tight">
                 1 Juta Paket Pangan Tersalurkan
               </h3>
               <p className="text-rose-50 font-medium mb-10 leading-relaxed">
@@ -364,7 +364,7 @@ export default function ImpactGalleryPage() {
                 <MapPin className="w-4 h-4" />
                 <span>Papua Barat</span>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-rose-600 transition-colors font-['Plus_Jakarta_Sans'] leading-snug">
+              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-rose-600 transition-colorsleading-snug">
                 Klinik Terapung Menembus Batas
               </h3>
               <p className="text-slate-500 text-sm line-clamp-3 mb-8 leading-relaxed font-medium">
@@ -421,7 +421,7 @@ export default function ImpactGalleryPage() {
         >
           <div className="bg-white rounded-[2.5rem] p-10 md:p-16 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col lg:flex-row items-center gap-16">
             <motion.div variants={fadeUp} className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 font-['Plus_Jakarta_Sans'] tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6tracking-tight">
                 Komitmen Transparansi Kami
               </h2>
               <p className="text-slate-500 font-medium text-lg leading-relaxed mb-10">

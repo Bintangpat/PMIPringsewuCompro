@@ -57,7 +57,7 @@ export default function HallOfFamePage() {
         <span className="inline-block px-5 py-2 mb-6 bg-rose-100 text-rose-700 font-bold text-xs rounded-full uppercase tracking-widest">
           Penghargaan Kemanusiaan
         </span>
-        <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 font-['Plus_Jakarta_Sans'] tracking-tight">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6tracking-tight">
           Hall of Fame
         </h1>
         <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium">
@@ -84,7 +84,7 @@ export default function HallOfFamePage() {
               <Crown className="w-7 h-7" />
             </div>
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900tracking-tight">
                 Platinum Sponsors
               </h2>
               <p className="text-sm font-medium text-slate-500 mt-1">
@@ -111,7 +111,7 @@ export default function HallOfFamePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 font-['Plus_Jakarta_Sans']">
+                  <h3 className="text-2xl font-bold mb-3 ">
                     PT Bank Mandiri (Persero) Tbk
                   </h3>
                   <p className="text-sm text-slate-400 font-medium leading-relaxed">
@@ -142,9 +142,7 @@ export default function HallOfFamePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 font-['Plus_Jakarta_Sans']">
-                    Telkom Indonesia
-                  </h3>
+                  <h3 className="text-2xl font-bold mb-3 ">Telkom Indonesia</h3>
                   <p className="text-sm text-slate-400 font-medium leading-relaxed">
                     Penyedia Infrastruktur Komunikasi Darurat & Donasi Tunai
                   </p>
@@ -174,7 +172,7 @@ export default function HallOfFamePage() {
               <Medal className="w-7 h-7" />
             </div>
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900tracking-tight">
                 Gold Sponsors
               </h2>
               <p className="text-sm font-medium text-slate-500 mt-1">
@@ -227,7 +225,7 @@ export default function HallOfFamePage() {
               <Star className="w-7 h-7" />
             </div>
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900tracking-tight">
                 Silver Sponsors
               </h2>
               <p className="text-sm font-medium text-slate-500 mt-1">
@@ -271,7 +269,7 @@ export default function HallOfFamePage() {
               <Trophy className="w-7 h-7" />
             </div>
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 font-['Plus_Jakarta_Sans'] tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900tracking-tight">
                 Bronze Sponsors
               </h2>
               <p className="text-sm font-medium text-slate-500 mt-1">
@@ -325,7 +323,7 @@ export default function HallOfFamePage() {
           </div>
 
           <div className="relative z-10 text-center max-w-3xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-extrabold font-['Plus_Jakarta_Sans'] tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-extraboldtracking-tight">
               Menjadi Bagian dari Perubahan
             </h2>
             <p className="text-lg text-rose-100 font-medium leading-relaxed max-w-2xl mx-auto">
