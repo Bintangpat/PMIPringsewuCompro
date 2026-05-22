@@ -109,7 +109,7 @@ export default function DonateGoodsPage() {
           {/* Bento Item 1: Food */}
           <motion.div
             variants={itemVariants}
-            className="md:col-span-2 bg-white p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-slate-100 flex flex-col md:flex-row gap-8 items-start"
+            className="md:col-span-2 bg-white p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-slate-100 flex flex-col md:flex-row gap-8 items-start"
           >
             <div className="p-5 bg-rose-50 rounded-2xl">
               <Utensils className="w-8 h-8 text-rose-600" />
@@ -136,7 +136,7 @@ export default function DonateGoodsPage() {
           {/* Bento Item 2: Medicine */}
           <motion.div
             variants={itemVariants}
-            className="bg-rose-600 text-white p-10 rounded-3xl flex flex-col justify-between shadow-xl shadow-rose-200"
+            className="bg-rose-600 text-white p-10 rounded-2xl flex flex-col justify-between shadow-xl shadow-rose-200"
           >
             <div>
               <Stethoscope className="w-10 h-10 mb-6 text-rose-200" />
@@ -159,7 +159,7 @@ export default function DonateGoodsPage() {
           {/* Bento Item 3: Hygiene */}
           <motion.div
             variants={itemVariants}
-            className="bg-white p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-slate-100"
+            className="bg-white p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-slate-100"
           >
             <Sparkles className="w-8 h-8 text-rose-600 mb-6" />
             <h3 className="text-2xl font-bold mb-4 ">Hygiene Kit</h3>
@@ -172,7 +172,7 @@ export default function DonateGoodsPage() {
           {/* Bento Item 4: Clothing */}
           <motion.div
             variants={itemVariants}
-            className="md:col-span-2 bg-slate-900 text-white p-10 rounded-3xl flex flex-col md:flex-row items-center gap-8 relative overflow-hidden"
+            className="md:col-span-2 bg-slate-900 text-white p-10 rounded-2xl flex flex-col md:flex-row items-center gap-8 relative overflow-hidden"
           >
             <div className="relative z-10 flex-1">
               <h3 className="text-2xl font-bold mb-4 text-rose-500 ">
@@ -247,7 +247,7 @@ export default function DonateGoodsPage() {
                 viewport={{ once: true }}
                 className="flex flex-col items-center text-center relative z-10 group"
               >
-                <div className="w-24 h-24 rounded-3xl bg-white shadow-xl border-2 border-slate-100 flex items-center justify-center mb-8 group-hover:border-rose-600 group-hover:rotate-6 transition-all duration-300">
+                <div className="w-24 h-24 rounded-2xl bg-white shadow-xl border-2 border-slate-100 flex items-center justify-center mb-8 group-hover:border-rose-600 group-hover:rotate-6 transition-all duration-300">
                   <item.icon className="w-10 h-10 text-rose-600" />
                 </div>
                 <h4 className="text-xl font-bold text-slate-900 mb-3 ">

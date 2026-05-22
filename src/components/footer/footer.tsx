@@ -1,12 +1,8 @@
-// StatsFooterSection.tsx
-// Screenshot 2 — Visitor stats counter + CTA band + Footer
-// Stack: React + Tailwind CSS + Framer Motion
-// ──────────────────────────────────────────────────────────────────────────────
-
 "use client";
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView, animate } from "framer-motion";
+import { fadeUp, staggerContainer } from "@/utils/framer-motion";
 import { BarChart2, Globe, Camera, Mail, Phone } from "lucide-react";
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface StatItem {
@@ -25,42 +21,7 @@ const STATS: StatItem[] = [
 const SOCIAL_ICONS = ["𝕏", "IG", "▶", "f"];
 
 // ── Framer variants ───────────────────────────────────────────────────────────
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: i * 0.15, ease: "easeOut" as const },
-  }),
-};
 
-const slideLeft = {
-  hidden: { opacity: 0, x: -30 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.55, ease: "easeOut" as const },
-  },
-};
-
-const slideRight = {
-  hidden: { opacity: 0, x: 30 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.55, ease: "easeOut" as const },
-  },
-};
-
-const staggerContainer = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.18,
-      delayChildren: 0.1,
-    },
-  },
-};
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 flex flex-col">

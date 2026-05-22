@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "@/utils/framer-motion";
 import {
   Search,
   Clock,
@@ -92,22 +93,6 @@ export default function CampaignsPage() {
   const [activeFilter, setActiveFilter] = useState("Semua");
 
   // --- Animation Variants ---
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 },
-    },
-  };
-
-  const fadeUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" as const },
-    },
-  };
 
   return (
     <div className="min-h-screen pt-12 bg-[#f8f9ff] text-slate-900 selection:bg-rose-200 selection:text-rose-900">

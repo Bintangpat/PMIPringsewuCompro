@@ -170,7 +170,7 @@ export default function FAQPage() {
             {/* Contact CTA Card */}
             <motion.div
               whileHover={{ scale: 1.01 }}
-              className="bg-[#b80035] text-white p-10 rounded-4xlex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-xl"
+              className="bg-[#b80035] text-white p-10 rounded-2xlex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-xl"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-2xl" />
               <div className="relative z-10">
@@ -191,7 +191,7 @@ export default function FAQPage() {
           {/* Category Sidebar (Right) - [cite: 5] */}
           <aside className="w-full lg:w-80 shrink-0">
             <div className="sticky top-28 space-y-6">
-              <div className="bg-slate-50 p-8 rounded-4xl border border-slate-200 shadow-sm">
+              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
                 <h4 className="font-bold text-xl mb-8 flex items-center gap-3">
                   <LayoutGrid className="text-[#b80035] w-6 h-6" />
                   Kategori
@@ -217,7 +217,7 @@ export default function FAQPage() {
               </div>
 
               {/* Secondary Widget: Stats */}
-              <div className="relative rounded-4xl overflow-hidden h-52 group shadow-lg">
+              <div className="relative rounded-2xl overflow-hidden h-52 group shadow-lg">
                 <img
                   alt="Donor Darah"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"

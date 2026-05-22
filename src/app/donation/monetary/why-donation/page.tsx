@@ -1,19 +1,4 @@
-/**
- * pages/donation/monetary/why-donate.tsx  (Next.js Pages Router)
- * ─ atau ─
- * app/donation/monetary/why-donate/page.tsx  (Next.js App Router)
- *
- * Stack  : Next.js 14 · TypeScript · Tailwind CSS · Framer Motion
- * Fonts  : Barlow Condensed (display) + Source Serif 4 (body)
- *          → tambahkan di next.config / _document / layout:
- *            import { Barlow_Condensed, Source_Serif_4 } from "next/font/google"
- *
- * Install:
- *   npm install framer-motion
- *   npm install -D @tailwindcss/typography   # (opsional, untuk prose)
- */
-
-"use client"; // hapus baris ini jika memakai Pages Router
+"use client";
 
 import type { Metadata } from "next";
 import Head from "next/head";
@@ -28,9 +13,16 @@ import {
   useTransform,
   animate,
 } from "framer-motion";
+import {
+  fadeUp,
+  fadeLeft,
+  fadeRight,
+  stagger,
+  cardVariant,
+} from "@/utils/framer-motion";
 
 //componentsimport
-import Navbar from "@/src/components/navbar/navbar";
+import Navbar from "@/components/navbar/navbar";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SEO METADATA  (App Router — pindahkan ke layout.tsx / generateMetadata jika
@@ -85,55 +77,6 @@ const SOCIAL_ICONS: { label: string; symbol: string }[] = [
   { label: "YouTube", symbol: "▶" },
   { label: "Facebook", symbol: "f" },
 ];
-
-// ─────────────────────────────────────────────────────────────────────────────
-// FRAMER VARIANTS
-// ─────────────────────────────────────────────────────────────────────────────
-const fadeUp = {
-  hidden: { opacity: 0, y: 36 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.65,
-      delay,
-      ease: [0.25, 0.46, 0.45, 0.94] as const,
-    },
-  }),
-};
-
-const fadeLeft = {
-  hidden: { opacity: 0, x: -32 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.6, delay, ease: "easeOut" as const },
-  }),
-};
-
-const fadeRight = {
-  hidden: { opacity: 0, x: 32 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.6, delay, ease: "easeOut" as const },
-  }),
-};
-
-const stagger = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.14, delayChildren: 0.1 } },
-};
-
-const cardVariant = {
-  hidden: { opacity: 0, y: 48, scale: 0.97 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const },
-  },
-};
 
 // ─────────────────────────────────────────────────────────────────────────────
 // HELPER: animated count-up

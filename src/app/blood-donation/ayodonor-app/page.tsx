@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUp, containerVariants } from "@/utils/framer-motion";
 import {
   SmartphoneNfc,
   CalendarDays,
@@ -26,22 +27,6 @@ import {
 
 export default function AyoDonorPage() {
   // --- Animation Variants ---
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 },
-    },
-  };
-
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" as const },
-    },
-  };
 
   const floatAnimation = {
     initial: { y: 0 },
@@ -178,7 +163,7 @@ export default function AyoDonorPage() {
               variants={floatAnimation}
               initial="initial"
               animate="animate"
-              className="relative w-full max-w-[320px] aspect-[9/18.5] bg-slate-900 rounded-[3rem] border-[8px] border-slate-900 shadow-2xl overflow-hidden shadow-slate-900/20"
+              className="relative w-full max-w-[320px] aspect-9/18.5 bg-slate-900 rounded-[3rem] border-8 border-slate-900 shadow-2xl overflow-hidden shadow-slate-900/20"
             >
               {/* Phone Notch */}
               <div className="absolute top-0 inset-x-0 h-6 flex justify-center items-end z-20">
@@ -506,7 +491,7 @@ export default function AyoDonorPage() {
         {/* Feature 1: Kartu Donor Digital (Large Feature) */}
         <motion.div
           variants={fadeUp}
-          className="md:col-span-8 bg-white rounded-4xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden border border-slate-100 hover:border-rose-200 transition-all duration-500 group flex flex-col md:flex-row"
+          className="md:col-span-8 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden border border-slate-100 hover:border-rose-200 transition-all duration-500 group flex flex-col md:flex-row"
         >
           <div className="p-10 md:w-1/2 flex flex-col justify-center">
             <div className="w-14 h-14 bg-rose-50 rounded-2xl flex items-center justify-center mb-6 text-rose-600 group-hover:scale-110 transition-transform duration-300">
@@ -554,7 +539,7 @@ export default function AyoDonorPage() {
         {/* Feature 2: Periksa Stok Darah (Medium Feature) */}
         <motion.div
           variants={fadeUp}
-          className="md:col-span-4 bg-white rounded-4xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden border border-slate-100 hover:border-rose-200 transition-all duration-500 group p-10 flex flex-col"
+          className="md:col-span-4 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden border border-slate-100 hover:border-rose-200 transition-all duration-500 group p-10 flex flex-col"
         >
           <div className="w-14 h-14 bg-rose-600 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-rose-200 group-hover:rotate-12 transition-transform duration-300">
             <Droplets className="w-7 h-7 fill-current" />
@@ -586,7 +571,7 @@ export default function AyoDonorPage() {
         {/* Feature 3: Jadwal Acara (Small) */}
         <motion.div
           variants={fadeUp}
-          className="md:col-span-4 bg-white rounded-4xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:-translate-y-1 hover:border-rose-200 transition-all duration-300 group p-8"
+          className="md:col-span-4 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:-translate-y-1 hover:border-rose-200 transition-all duration-300 group p-8"
         >
           <div className="w-12 h-12 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
             <CalendarDays className="w-6 h-6" />
@@ -603,7 +588,7 @@ export default function AyoDonorPage() {
         {/* Feature 4: Pengingat Cerdas (Small) */}
         <motion.div
           variants={fadeUp}
-          className="md:col-span-4 bg-white rounded-4xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:-translate-y-1 hover:border-rose-200 transition-all duration-300 group p-8"
+          className="md:col-span-4 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:-translate-y-1 hover:border-rose-200 transition-all duration-300 group p-8"
         >
           <div className="w-12 h-12 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
             <BellRing className="w-6 h-6" />
@@ -620,7 +605,7 @@ export default function AyoDonorPage() {
         {/* Feature 5: Lokasi Donasi (Small) */}
         <motion.div
           variants={fadeUp}
-          className="md:col-span-4 bg-white rounded-4xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:-translate-y-1 hover:border-rose-200 transition-all duration-300 group p-8"
+          className="md:col-span-4 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:-translate-y-1 hover:border-rose-200 transition-all duration-300 group p-8"
         >
           <div className="w-12 h-12 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
             <MapPin className="w-6 h-6" />

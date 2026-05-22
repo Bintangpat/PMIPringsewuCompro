@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "@/utils/framer-motion";
 import {
   HeartHandshake,
   Brain,
@@ -15,24 +16,6 @@ import {
 } from "lucide-react";
 
 export default function VolunteerPage() {
-  // Animation Variants
-  const fadeUpVariant = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" } as const,
-    },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 },
-    },
-  };
-
   return (
     <div className="min-h-screen bg-[#f8f9ff] text-slate-900 selection:bg-rose-200 selection:text-rose-900">
       <main className="">
@@ -49,7 +32,7 @@ export default function VolunteerPage() {
               src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80"
               alt="Relawan PMI membantu masyarakat"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
           </motion.div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
@@ -60,30 +43,27 @@ export default function VolunteerPage() {
               className="max-w-2xl text-white"
             >
               <motion.span
-                variants={fadeUpVariant}
+                variants={fadeUp}
                 className="inline-block px-4 py-1.5 bg-rose-600 rounded-full text-xs font-bold uppercase tracking-widest text-white mb-6"
               >
                 Program Relawan PMI
               </motion.span>
               <motion.h1
-                variants={fadeUpVariant}
+                variants={fadeUp}
                 className="text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6"
               >
                 Jadilah Bagian dari <br />{" "}
                 <span className="text-rose-400">Perubahan Nyata</span>
               </motion.h1>
               <motion.p
-                variants={fadeUpVariant}
+                variants={fadeUp}
                 className="text-lg text-slate-200 mb-10 max-w-xl leading-relaxed"
               >
                 Setiap detik sangat berarti. Bergabunglah dengan ribuan relawan
                 kami untuk memberikan bantuan kemanusiaan kepada mereka yang
                 paling membutuhkan.
               </motion.p>
-              <motion.div
-                variants={fadeUpVariant}
-                className="flex flex-wrap gap-4"
-              >
+              <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
                 <button className="bg-rose-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-rose-700 shadow-xl shadow-rose-500/20 active:scale-95 transition-all">
                   Gabung Sekarang
                 </button>
@@ -117,8 +97,8 @@ export default function VolunteerPage() {
           >
             {/* Large Feature (Span 2) */}
             <motion.div
-              variants={fadeUpVariant}
-              className="md:col-span-2 bg-white p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col justify-between group hover:border-rose-200 hover:shadow-[0_8px_30px_rgb(225,29,72,0.08)] transition-all duration-500"
+              variants={fadeUp}
+              className="md:col-span-2 bg-white p-10 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col justify-between group hover:border-rose-200 hover:shadow-[0_8px_30px_rgb(225,29,72,0.08)] transition-all duration-500"
             >
               <div>
                 <div className="w-16 h-16 bg-rose-50 rounded-2xl flex items-center justify-center mb-8 text-rose-600 group-hover:scale-110 transition-transform duration-500">
@@ -145,8 +125,8 @@ export default function VolunteerPage() {
             {/* Column Features */}
             <div className="flex flex-col gap-6">
               <motion.div
-                variants={fadeUpVariant}
-                className="bg-white p-8 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 group"
+                variants={fadeUp}
+                className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 group"
               >
                 <div className="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center mb-6 text-rose-600 group-hover:rotate-12 transition-transform duration-300">
                   <Brain className="w-6 h-6" />
@@ -161,8 +141,8 @@ export default function VolunteerPage() {
               </motion.div>
 
               <motion.div
-                variants={fadeUpVariant}
-                className="bg-white p-8 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 group"
+                variants={fadeUp}
+                className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 group"
               >
                 <div className="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center mb-6 text-rose-600 group-hover:-rotate-12 transition-transform duration-300">
                   <Users className="w-6 h-6" />
@@ -175,8 +155,8 @@ export default function VolunteerPage() {
               </motion.div>
 
               <motion.div
-                variants={fadeUpVariant}
-                className="bg-rose-600 p-8 rounded-[2rem] shadow-xl shadow-rose-200 text-white relative overflow-hidden"
+                variants={fadeUp}
+                className="bg-rose-600 p-8 rounded-2xl shadow-xl shadow-rose-200 text-white relative overflow-hidden"
               >
                 <div className="relative z-10">
                   <h3 className="text-xl font-bold mb-3">
@@ -227,8 +207,8 @@ export default function VolunteerPage() {
             >
               {/* Story Card 1 */}
               <motion.div
-                variants={fadeUpVariant}
-                className="bg-white rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border border-slate-100"
+                variants={fadeUp}
+                className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border border-slate-100"
               >
                 <div className="relative h-64 overflow-hidden group">
                   <img
@@ -242,7 +222,7 @@ export default function VolunteerPage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-8 flex-grow flex flex-col">
+                <div className="p-8 grow flex flex-col">
                   <h3 className="text-xl font-bold mb-4 tracking-tight leading-snug">
                     "Senyum Pasien Adalah Energi Terbesar Saya"
                   </h3>
@@ -273,8 +253,8 @@ export default function VolunteerPage() {
 
               {/* Story Card 2 */}
               <motion.div
-                variants={fadeUpVariant}
-                className="bg-white rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border-t-[6px] border-t-rose-600 border-x border-b border-slate-100"
+                variants={fadeUp}
+                className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border-t-[6px] border-t-rose-600 border-x border-b border-slate-100"
               >
                 <div className="relative h-64 overflow-hidden group">
                   <img
@@ -288,7 +268,7 @@ export default function VolunteerPage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-8 flex-grow flex flex-col">
+                <div className="p-8 grow flex flex-col">
                   <h3 className="text-xl font-bold mb-4 tracking-tight leading-snug">
                     Membangun Kembali Harapan di Cianjur
                   </h3>
@@ -319,8 +299,8 @@ export default function VolunteerPage() {
 
               {/* Story Card 3 */}
               <motion.div
-                variants={fadeUpVariant}
-                className="bg-white rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border border-slate-100"
+                variants={fadeUp}
+                className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border border-slate-100"
               >
                 <div className="relative h-64 overflow-hidden group">
                   <img
@@ -334,7 +314,7 @@ export default function VolunteerPage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-8 flex-grow flex flex-col">
+                <div className="p-8 grow flex flex-col">
                   <h3 className="text-xl font-bold mb-4 tracking-tight leading-snug">
                     Menanamkan Jiwa Kemanusiaan Sejak Dini
                   </h3>

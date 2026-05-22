@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { generateBreadcrumbs } from "@/src/lib/breadcrumb";
+import { generateBreadcrumbs } from "@/lib/breadcrumb";
 
 export default function Breadcrumb() {
   const pathname = usePathname();

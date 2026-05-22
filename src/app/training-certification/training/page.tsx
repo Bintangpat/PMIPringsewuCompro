@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "@/utils/framer-motion";
 import {
   Search,
   ArrowRight,
@@ -120,24 +121,6 @@ const PARTNERS = [
   "Bursa Efek Indonesia",
 ];
 
-// --- Animation Variants ---
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 },
-  },
-};
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" } as const,
-  },
-};
-
 export default function PMITrainingCenter() {
   return (
     <div className="bg-[#f8f9ff] text-[#0b1c30] selection:bg-[#ffdada] selection:text-[#b80035] min-h-screen">
@@ -213,7 +196,7 @@ export default function PMITrainingCenter() {
             {/* Individual Training */}
             <motion.div
               variants={fadeUp}
-              className="group bg-white p-8 rounded-[2rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 hover:border-[#b80035]/30 hover:shadow-xl transition-all duration-300"
+              className="group bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 hover:border-[#b80035]/30 hover:shadow-xl transition-all duration-300"
             >
               <div className="relative h-64 mb-8 overflow-hidden rounded-2xl">
                 <img
@@ -240,7 +223,7 @@ export default function PMITrainingCenter() {
             {/* Partner Training */}
             <motion.div
               variants={fadeUp}
-              className="group bg-white p-8 rounded-[2rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 hover:border-[#b80035]/30 hover:shadow-xl transition-all duration-300"
+              className="group bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 hover:border-[#b80035]/30 hover:shadow-xl transition-all duration-300"
             >
               <div className="relative h-64 mb-8 overflow-hidden rounded-2xl">
                 <img
@@ -297,7 +280,7 @@ export default function PMITrainingCenter() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="overflow-x-auto bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100"
+            className="overflow-x-auto bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100"
           >
             <table className="w-full text-left border-collapse min-w-[800px]">
               <thead className="bg-[#f8f9ff] text-[#0b1c30] border-b border-slate-100">
@@ -436,7 +419,7 @@ export default function PMITrainingCenter() {
       {/* Testimonials Section (Bento Layout) */}
       <section className="py-24 bg-[#213145] text-white overflow-hidden relative">
         {/* Subtle background grain or pattern effect can go here, simulated by a gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#111c2d] to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-linear-to-br from-[#111c2d] to-transparent opacity-80" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
           <motion.div
@@ -464,7 +447,7 @@ export default function PMITrainingCenter() {
               <motion.div
                 key={idx}
                 variants={fadeUp}
-                className={`${t.colSpan} bg-white/5 backdrop-blur-md p-8 md:p-10 rounded-[2rem] border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors`}
+                className={`${t.colSpan} bg-white/5 backdrop-blur-md p-8 md:p-10 rounded-2xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors`}
               >
                 <div>
                   <Quote className="text-[#ffb3b6] w-10 h-10 mb-6 opacity-80" />

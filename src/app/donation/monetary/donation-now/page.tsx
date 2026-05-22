@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "@/utils/framer-motion";
 import {
   ShieldCheck,
   Heart,
@@ -12,7 +13,7 @@ import {
   Shield,
   CreditCard,
 } from "lucide-react";
-import Breadcrumb from "@/src/components/crumbread";
+import Breadcrumb from "@/components/crumbread";
 
 const presetAmounts = [25000, 50000, 100000, 200000, 500000, 1000000];
 
@@ -21,22 +22,6 @@ export default function DonationFormPage() {
   const [customAmount, setCustomAmount] = useState<string>("");
 
   // --- Animation Variants ---
-  const fadeUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" as const },
-    },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 },
-    },
-  };
 
   // Format currency for display
   const formatCurrency = (amount: number) => {

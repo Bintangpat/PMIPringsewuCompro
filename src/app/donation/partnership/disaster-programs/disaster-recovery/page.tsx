@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "@/utils/framer-motion";
 import {
   Siren,
   HeartHandshake,
@@ -12,24 +13,6 @@ import {
 } from "lucide-react";
 
 export default function DisasterRecoveryPage() {
-  // --- Animation Variants ---
-  const fadeUpVariant = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" as const },
-    },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 },
-    },
-  };
-
   const scaleUpVariant = {
     hidden: { opacity: 0, scale: 0.95 },
     visible: {
@@ -67,7 +50,7 @@ export default function DisasterRecoveryPage() {
             className="relative z-10 max-w-4xl mx-auto space-y-6"
           >
             <motion.div
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="inline-flex items-center justify-center p-4 bg-white rounded-full mb-4 shadow-2xl"
             >
               <img
@@ -77,7 +60,7 @@ export default function DisasterRecoveryPage() {
               />
             </motion.div>
             <motion.h1
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.1]"
             >
               Pemulihan Pasca
@@ -85,7 +68,7 @@ export default function DisasterRecoveryPage() {
               <span className="text-rose-400">Bencana</span>
             </motion.h1>
             <motion.p
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed font-medium"
             >
               Program Pemulihan Bencana didedikasikan untuk mendukung komunitas
@@ -93,7 +76,7 @@ export default function DisasterRecoveryPage() {
               setelah bencana melanda.
             </motion.p>
             <motion.div
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="flex flex-col sm:flex-row gap-4 justify-center pt-6"
             >
               <button className="bg-rose-600 text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-rose-600/30 hover:bg-rose-700 active:scale-95 transition-all flex items-center justify-center gap-2">
@@ -118,7 +101,7 @@ export default function DisasterRecoveryPage() {
               variants={staggerContainer}
               className="lg:col-span-7 space-y-12"
             >
-              <motion.div variants={fadeUpVariant} className="space-y-6">
+              <motion.div variants={fadeUp} className="space-y-6">
                 <h2 className="text-3xl font-bold text-rose-600 border-l-4 border-rose-600 pl-5 tracking-tight">
                   Pentingnya Program Ini
                 </h2>
@@ -134,7 +117,7 @@ export default function DisasterRecoveryPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <motion.div
-                  variants={fadeUpVariant}
+                  variants={fadeUp}
                   className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-t-[6px] border-rose-600 group hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
                 >
                   <HeartHandshake className="text-rose-600 w-10 h-10 mb-5 group-hover:scale-110 transition-transform duration-300" />
@@ -149,7 +132,7 @@ export default function DisasterRecoveryPage() {
                 </motion.div>
 
                 <motion.div
-                  variants={fadeUpVariant}
+                  variants={fadeUp}
                   className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-t-[6px] border-rose-600 group hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
                 >
                   <Stethoscope className="text-rose-600 w-10 h-10 mb-5 group-hover:scale-110 transition-transform duration-300" />
@@ -164,7 +147,7 @@ export default function DisasterRecoveryPage() {
                 </motion.div>
 
                 <motion.div
-                  variants={fadeUpVariant}
+                  variants={fadeUp}
                   className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-t-[6px] border-rose-600 group hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
                 >
                   <Users className="text-rose-600 w-10 h-10 mb-5 group-hover:scale-110 transition-transform duration-300" />
@@ -178,7 +161,7 @@ export default function DisasterRecoveryPage() {
                 </motion.div>
 
                 <motion.div
-                  variants={fadeUpVariant}
+                  variants={fadeUp}
                   className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-t-[6px] border-rose-600 group hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
                 >
                   <Brain className="text-rose-600 w-10 h-10 mb-5 group-hover:scale-110 transition-transform duration-300" />
@@ -350,7 +333,7 @@ export default function DisasterRecoveryPage() {
               ].map((stat, idx) => (
                 <motion.div
                   key={idx}
-                  variants={fadeUpVariant}
+                  variants={fadeUp}
                   className="text-center p-8 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:-translate-y-1 hover:border-rose-100 transition-all duration-300"
                 >
                   <div className="text-4xl md:text-5xl font-extrabold text-rose-600 mb-3 tracking-tighter">

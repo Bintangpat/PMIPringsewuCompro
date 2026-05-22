@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUp } from "@/utils/framer-motion";
 import {
   Crown,
   Gem,
@@ -18,16 +19,6 @@ import {
 } from "lucide-react";
 
 export default function HallOfFamePage() {
-  // --- Animation Variants ---
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" as const },
-    },
-  };
-
   const staggerContainer = {
     hidden: { opacity: 0 },
     visible: {
@@ -97,7 +88,7 @@ export default function HallOfFamePage() {
             {/* Platinum Card 1 */}
             <motion.div
               variants={fadeUp}
-              className="bg-slate-900 text-white rounded-4xl p-8 shadow-2xl border border-slate-800 hover:border-rose-500/50 transition-all duration-500 group overflow-hidden relative flex flex-col h-full hover:-translate-y-1"
+              className="bg-slate-900 text-white rounded-2xl p-8 shadow-2xl border border-slate-800 hover:border-rose-500/50 transition-all duration-500 group overflow-hidden relative flex flex-col h-full hover:-translate-y-1"
             >
               <div className="absolute -top-4 -right-4 p-4 opacity-5 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700">
                 <Gem className="w-48 h-48" />
@@ -128,7 +119,7 @@ export default function HallOfFamePage() {
             {/* Platinum Card 2 */}
             <motion.div
               variants={fadeUp}
-              className="bg-slate-900 text-white rounded-4xl p-8 shadow-2xl border border-slate-800 hover:border-rose-500/50 transition-all duration-500 group overflow-hidden relative flex flex-col h-full hover:-translate-y-1"
+              className="bg-slate-900 text-white rounded-2xl p-8 shadow-2xl border border-slate-800 hover:border-rose-500/50 transition-all duration-500 group overflow-hidden relative flex flex-col h-full hover:-translate-y-1"
             >
               <div className="absolute -top-4 -right-4 p-4 opacity-5 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700">
                 <Gem className="w-48 h-48" />
@@ -192,7 +183,7 @@ export default function HallOfFamePage() {
               <motion.div
                 key={company}
                 variants={popIn}
-                className="aspect-square bg-white border-2 border-amber-100/50 rounded-4xl p-6 flex flex-col items-center justify-center gap-5 hover:border-amber-400 hover:shadow-xl hover:shadow-amber-100 transition-all duration-300 group hover:-translate-y-1 cursor-pointer"
+                className="aspect-square bg-white border-2 border-amber-100/50 rounded-2xl p-6 flex flex-col items-center justify-center gap-5 hover:border-amber-400 hover:shadow-xl hover:shadow-amber-100 transition-all duration-300 group hover:-translate-y-1 cursor-pointer"
               >
                 <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
                   <img

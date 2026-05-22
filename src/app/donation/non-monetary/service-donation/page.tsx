@@ -13,26 +13,9 @@ import {
   Mail,
   Phone,
 } from "lucide-react";
+import { staggerContainer, fadeUp } from "@/utils/framer-motion";
 
 export default function ServiceDonationPage() {
-  // Animation Variants
-  const fadeUpVariant = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" as const },
-    },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 },
-    },
-  };
-
   return (
     <div className="min-h-screen bg-[#f8f9ff] text-slate-900 selection:bg-rose-200 selection:text-rose-900">
       {/* TopNavBar */}
@@ -61,30 +44,27 @@ export default function ServiceDonationPage() {
             className="max-w-2xl text-white"
           >
             <motion.span
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="inline-block px-4 py-1.5 bg-rose-600 rounded-full text-xs font-bold uppercase tracking-widest text-white mb-6"
             >
               Program Relawan PMI
             </motion.span>
             <motion.h1
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6"
             >
               Jadilah Bagian dari <br />{" "}
               <span className="text-rose-400">Perubahan Nyata</span>
             </motion.h1>
             <motion.p
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="text-lg text-slate-200 mb-10 max-w-xl leading-relaxed"
             >
               Setiap detik sangat berarti. Bergabunglah dengan ribuan relawan
               kami untuk memberikan bantuan kemanusiaan kepada mereka yang
               paling membutuhkan.
             </motion.p>
-            <motion.div
-              variants={fadeUpVariant}
-              className="flex flex-wrap gap-4"
-            >
+            <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
               <button className="bg-rose-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-rose-700 shadow-xl shadow-rose-500/20 active:scale-95 transition-all">
                 Gabung Sekarang
               </button>
@@ -117,7 +97,7 @@ export default function ServiceDonationPage() {
         >
           {/* Large Feature (Span 2) */}
           <motion.div
-            variants={fadeUpVariant}
+            variants={fadeUp}
             className="md:col-span-2 bg-white p-10 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col justify-between group hover:border-rose-200 hover:shadow-[0_8px_30px_rgb(225,29,72,0.08)] transition-all duration-500"
           >
             <div>
@@ -145,7 +125,7 @@ export default function ServiceDonationPage() {
           {/* Column Features */}
           <div className="flex flex-col gap-6">
             <motion.div
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 group"
             >
               <div className="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center mb-6 text-rose-600 group-hover:rotate-12 transition-transform duration-300">
@@ -161,7 +141,7 @@ export default function ServiceDonationPage() {
             </motion.div>
 
             <motion.div
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 group"
             >
               <div className="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center mb-6 text-rose-600 group-hover:-rotate-12 transition-transform duration-300">
@@ -175,7 +155,7 @@ export default function ServiceDonationPage() {
             </motion.div>
 
             <motion.div
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="bg-rose-600 p-8 rounded-2xl shadow-xl shadow-rose-200 text-white relative overflow-hidden"
             >
               <div className="relative z-10">
@@ -227,7 +207,7 @@ export default function ServiceDonationPage() {
           >
             {/* Story Card 1 */}
             <motion.div
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border border-slate-100"
             >
               <div className="relative h-64 overflow-hidden group">
@@ -273,7 +253,7 @@ export default function ServiceDonationPage() {
 
             {/* Story Card 2 */}
             <motion.div
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border-t-[6px] border-t-rose-600 border-x border-b border-slate-100"
             >
               <div className="relative h-64 overflow-hidden group">
@@ -319,7 +299,7 @@ export default function ServiceDonationPage() {
 
             {/* Story Card 3 */}
             <motion.div
-              variants={fadeUpVariant}
+              variants={fadeUp}
               className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full border border-slate-100"
             >
               <div className="relative h-64 overflow-hidden group">

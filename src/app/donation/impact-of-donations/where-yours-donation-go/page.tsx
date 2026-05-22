@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "@/utils/framer-motion";
 import {
   Search,
   ArrowLeft,
@@ -14,24 +15,6 @@ import {
 } from "lucide-react";
 
 export default function ImpactGalleryPage() {
-  // --- Animation Variants ---
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" as const },
-    },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 },
-    },
-  };
-
   return (
     <main className="pt-20 selection:bg-rose-200 selection:text-rose-900 ">
       {/* --- Hero Section --- */}
@@ -66,7 +49,7 @@ export default function ImpactGalleryPage() {
           {/* Search and Filter Cluster */}
           <motion.div
             variants={fadeUp}
-            className="w-full max-w-4xl bg-white p-2.5 rounded-4xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-100"
+            className="w-full max-w-4xl bg-white p-2.5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-100"
           >
             <div className="flex flex-col md:flex-row items-center gap-4">
               <div className="relative flex-1 w-full px-4 border-b md:border-b-0 md:border-r border-slate-100 pb-4 md:pb-0">
@@ -139,7 +122,7 @@ export default function ImpactGalleryPage() {
           {/* Card 1 */}
           <motion.article
             variants={fadeUp}
-            className="group bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+            className="group bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 hover:-translate-y-1 flex flex-col"
           >
             <div className="relative h-64 overflow-hidden">
               <img
@@ -197,7 +180,7 @@ export default function ImpactGalleryPage() {
           {/* Card 2 */}
           <motion.article
             variants={fadeUp}
-            className="group bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+            className="group bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 hover:-translate-y-1 flex flex-col"
           >
             <div className="relative h-64 overflow-hidden">
               <img
@@ -255,7 +238,7 @@ export default function ImpactGalleryPage() {
           {/* Card 3 */}
           <motion.article
             variants={fadeUp}
-            className="group bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+            className="group bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 hover:-translate-y-1 flex flex-col"
           >
             <div className="relative h-64 overflow-hidden">
               <img
@@ -313,7 +296,7 @@ export default function ImpactGalleryPage() {
           {/* Card 4 (Bento Style Hybrid - Spans 2 columns on md) */}
           <motion.article
             variants={fadeUp}
-            className="group md:col-span-2 bg-rose-600 rounded-3xl overflow-hidden shadow-xl shadow-rose-200/50 flex flex-col md:flex-row text-white hover:shadow-2xl transition-all duration-500"
+            className="group md:col-span-2 bg-rose-600 rounded-2xl overflow-hidden shadow-xl shadow-rose-200/50 flex flex-col md:flex-row text-white hover:shadow-2xl transition-all duration-500"
           >
             <div className="md:w-1/2 relative h-64 md:h-auto overflow-hidden">
               <img
@@ -347,7 +330,7 @@ export default function ImpactGalleryPage() {
           {/* Card 5 */}
           <motion.article
             variants={fadeUp}
-            className="group bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+            className="group bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:border-rose-200 transition-all duration-300 hover:-translate-y-1 flex flex-col"
           >
             <div className="relative h-64 overflow-hidden">
               <img
@@ -462,7 +445,7 @@ export default function ImpactGalleryPage() {
 
             <motion.div variants={fadeUp} className="lg:w-1/2 w-full">
               {/* Progress Tracking Component */}
-              <div className="bg-slate-50 p-8 md:p-10 rounded-4xl border border-slate-200">
+              <div className="bg-slate-50 p-8 md:p-10 rounded-2xl border border-slate-200">
                 <div className="mb-10">
                   <div className="flex justify-between items-end mb-3">
                     <span className="font-bold text-slate-700">
